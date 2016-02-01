@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+}
+
+#allgame {
+  width: 850px;
+  height: 550px;
+  background-color: blue;
+}
+
+#gameboard {
+  width: 550px;
+  height: 550px;
+  background-color: grey;
+  float: right;
+}
+
+#player2 {
+  float: right;
+  height: 150px;
+  width: 150px;
+  background-color: turquoise;
+}
+
+#player1 {
+  float: right;
+  height: 150px;
+  width: 150px;
+  background-color: turquoise;
+}
