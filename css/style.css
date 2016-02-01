@@ -2,6 +2,11 @@ h1 {
   text-align: center;
 }
 
+#allpage {
+  width: 850px;
+  height: 675px;
+}
+
 #allgame {
   width: 850px;
   height: 550px;
