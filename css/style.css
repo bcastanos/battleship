@@ -25,6 +25,7 @@ h1 {
   height: 150px;
   width: 150px;
   background-color: turquoise;
+  margin-top: 100px;
 }
 
 #player1 {
@@ -32,4 +33,77 @@ h1 {
   height: 150px;
   width: 150px;
   background-color: turquoise;
+  margin-top: 100px
+}
+
+#rowG {
+  width: 550px;
+  height: 70px;
+}
+
+#rowF {
+  width: 550px;
+  height: 70px;
+}
+
+#rowE {
+  width: 550px;
+  height: 70px;
+}
+
+#rowD {
+  width: 550px;
+  height: 70px;
+}
+
+#rowC {
+  width: 550px;
+  height: 70px;
+}
+
+#rowB {
+  width: 550px;
+  height: 70px;
+}
+
+#rowA {
+  width: 550px;
+  height: 70px;
+}
+
+#bottomGuide {
+  height: 46px;
+  width: 504px;
+  float: right;
+}
+
+.border {
+  background-color: white;
+  height: 70px;
+  width: 2px;
+  float: right;
+}
+
+.divider {
+  background-color: white;
+  height: 2px;
+  width: 504px;
+  float: right;
+}
+
+.square {
+  float: right;
+  background-color: black;
+  width: 70px;
+  height: 70px;
+}
+
+.leftguide {
+  font-size: 30px;
+}
+
+.lowGuide {
+  font-size: 30px;
+  width: 72px;
+  float: right;
 }
