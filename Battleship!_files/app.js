@@ -9,49 +9,8 @@ var allShips = document.getElementsByClassName('ship')
   submarine.className += ' ship'
   destroyer.className += ' ship'
 
-  var boat = []
-  var boatChoose = [Math.floor(Math.random() * allSquares.length)]
-  var boatNum = boatChoose[0]
-
-  // for (var i = 0; i < 4; i++) {
-  //   addOne = boatNum + 1;
-  //   addTwo = boatNum + 2;
-  //   addThree = boatNum + 3;
-  //   boat.push(boatNum);
-  //   boat.push(addOne);
-  //   boat.push(addTwo);
-  //   boat.push(addThree);
-  //   console.log(boat);
-  // }
-
-  function makeBoat() {
-    // if (boatNum <= 3 || 7 <= boatNum <= 10 || 14 <= boatNum <= 17 ||
-    //   21 <= boatNum <= 24 || 28 <= boatNum <= 31 ||
-    //   35 <= boatNum <= 38 || 42 <= boatNum <= 45) {
-      console.log(boatNum)
-      if (boatNum <= 3 || boatNum >= 33) {
-      addOne = boatNum + 1;
-      addTwo = boatNum + 2;
-      addThree = boatNum + 3;
-      boat.push(boatNum);
-      boat.push(addOne);
-      boat.push(addTwo);
-      boat.push(addThree);
-      console.log(boat);}
-      else {console.log('else')}
-  }
-
-  makeBoat()
-
-
-
-
-
-// console.log([Math.floor(Math.random() * allSquares.length)])
-
-function allSqRand() {
-  console.log(Math.random() * allSquares.length)
-}
+console.log([Math.floor(Math.random() * allSquares.length)])
+console.log(allSquares[42])
 
 var game = {
   player1: {name: "Player 1",score: 0},
