@@ -8,9 +8,9 @@ h1 {
 }
 
 #allgame {
-  width: 850px;
+  width: 890px;
   height: 550px;
-  background-color: blue;
+  /*background-color: blue;*/
   opacity: .8;
 }
 
@@ -23,22 +23,27 @@ h1 {
 
 #player2 {
   float: right;
-  height: 150px;
+  height: 100px;
   width: 150px;
-  background-color: turquoise;
+  background-color: white;
   margin-top: 100px;
+  margin-left: 20px;
   font-size: 30px;
+  font: arial;
   text-align: center;
+  border-radius: 25px;
 }
 
 #player1 {
   float: right;
-  height: 150px;
+  height: 100px;
   width: 150px;
-  background-color: turquoise;
+  background-color: white;
   margin-top: 100px;
+  margin-right: 20px;
   font-size: 30px;
   text-align: center;
+  border-radius: 25px;
 }
 
 #rowG {
