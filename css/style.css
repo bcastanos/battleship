@@ -18,6 +18,21 @@ h1 {
     font-size: 30px;
     text-align: center;
     line-height: 200px;
+    border-radius: 20px;
+}
+
+#intro {
+    position: absolute;
+    left: 303px;
+    top: 232px;
+    border: 2px solid white;
+    height: 345px;
+    width: 343px;
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
 }
 
 #allgame {

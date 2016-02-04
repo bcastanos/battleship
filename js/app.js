@@ -2,12 +2,17 @@ var scoreOne = document.getElementById('player1');
 var scoreTwo = document.getElementById('player2');
 var allSquares = document.getElementsByClassName('square')
 
+var introMessage = $('#intro')
+
 var winMessage = $('#message')
 winMessage.hide()
 
 var battleArray = []
 var battleChoose = [Math.floor(Math.random() * allSquares.length)]
 var battleNum = battleChoose[0]
+
+$(introMessage).click(function() {
+  introMessage.hide(1000)})
 
   makeBattle()
   var longBattleship = []
@@ -200,6 +205,8 @@ function checkWinner() {
   else {}
 
 }
+
+
 
 $(allSquares).click(function() {
   if ($(this).hasClass('ship')) {
