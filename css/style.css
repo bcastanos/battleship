@@ -110,10 +110,13 @@ h1 {
 
 .leftguide {
   font-size: 30px;
+  line-height: 3;
+  text-align: center;
 }
 
 .lowGuide {
   font-size: 30px;
   width: 72px;
   float: right;
+  text-align: center;
 }

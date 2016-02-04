@@ -177,13 +177,12 @@ $(allSquares).click(function() {
   if ($(this).hasClass('ship')) {
     $(this).html('<img src="explosion.jpg" alt="boom" />');
     incrementScore();
-    $(scoreOne).text('PLAYER 1 SCORE: ' + game.player1.score)
-    $(scoreTwo).text('PLAYER 2 SCORE: ' + game.player2.score)
+    $(scoreOne).text('PLAYER 1 SCORE: ' + game.player1.score);
+    $(scoreTwo).text('PLAYER 2 SCORE: ' + game.player2.score);
     // console.log(currentPlayer);
   } else {
   $(this).fadeTo('slow', .025);
     switchTurn();
-    // console.log(currentPlayer);
   }
 })
 
