@@ -189,11 +189,13 @@ $(allSquares).click(function() {
     incrementScore();
     $(scoreOne).text('PLAYER 1 SCORE: ' + game.player1.score);
     $(scoreTwo).text('PLAYER 2 SCORE: ' + game.player2.score);
-    checkWinner()
+    checkWinner();
+    $(this).off('click');
     // console.log(currentPlayer);
   } else {
   $(this).fadeTo('slow', .025);
     switchTurn();
+    $(this).off('click');
   }
 })
 
