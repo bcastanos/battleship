@@ -2,6 +2,9 @@ var scoreOne = document.getElementById('player1');
 var scoreTwo = document.getElementById('player2');
 var allSquares = document.getElementsByClassName('square')
 
+var winMessage = $('#message')
+winMessage.hide()
+
 var battleArray = []
 var battleChoose = [Math.floor(Math.random() * allSquares.length)]
 var battleNum = battleChoose[0]
@@ -174,10 +177,25 @@ function switchTurn(){
 }
 
 // console.log(game.player1.score + game.player2.score)
+// function checkWinner() {
+//   if ((game.player1.score + game.player2.score) > 9) {
+//     if (game.player1.score > game.player2.score) {window.alert('Player 1 Wins!')}
+//     else {window.alert('Player 2 Wins!')}
+//   }
+//   else {}
+//
+// }
+
 function checkWinner() {
   if ((game.player1.score + game.player2.score) > 9) {
-    if (game.player1.score > game.player2.score) {window.alert('Player 1 Wins!')}
-    else {window.alert('Player 2 Wins!')}
+    if (game.player1.score > game.player2.score) {
+      winMessage.text('Player 1 Wins!');
+      winMessage.show(1000);
+      }
+    else {
+      winMessage.text('Player 2 Wins!');
+      winMessage.show(1000);
+    }
   }
   else {}
 

@@ -7,6 +7,19 @@ h1 {
   height: 675px;
 }
 
+#message {
+    position: absolute;
+    left: 375px;
+    top: 305px;
+    border: 2px solid white;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 200px;
+}
+
 #allgame {
   width: 890px;
   height: 550px;
