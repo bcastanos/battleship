@@ -173,12 +173,23 @@ function switchTurn(){
   // return currentPlayer
 }
 
+// console.log(game.player1.score + game.player2.score)
+function checkWinner() {
+  if ((game.player1.score + game.player2.score) > 9) {
+    if (game.player1.score > game.player2.score) {window.alert('Player 1 Wins!')}
+    else {window.alert('Player 2 Wins!')}
+  }
+  else {}
+
+}
+
 $(allSquares).click(function() {
   if ($(this).hasClass('ship')) {
     $(this).html('<img src="explosion.jpg" alt="boom" />');
     incrementScore();
     $(scoreOne).text('PLAYER 1 SCORE: ' + game.player1.score);
     $(scoreTwo).text('PLAYER 2 SCORE: ' + game.player2.score);
+    checkWinner()
     // console.log(currentPlayer);
   } else {
   $(this).fadeTo('slow', .025);
