@@ -1,6 +1,7 @@
 var scoreOne = document.getElementById('player1');
 var scoreTwo = document.getElementById('player2');
 var allSquares = document.getElementsByClassName('square')
+var boom = $('#explosionSound')[0]
 
 var introMessage = $('#intro')
 
@@ -168,11 +169,11 @@ function switchTurn(){
 function checkWinner() {
   if ((game.player1.score + game.player2.score) > 12) {
     if (game.player1.score > game.player2.score) {
-      winMessage.text('Player 1 Wins!');
+      winMessage.html('<p>Player 1 Wins!</p> <p>Click to play again...</p>');
       winMessage.show(1000);
       }
     else {
-      winMessage.text('Player 2 Wins!');
+      winMessage.html('<p>Player 2 Wins!</p> <p>Click to play again...</p>');
       winMessage.show(1000);
     }
   }
@@ -182,6 +183,7 @@ function checkWinner() {
 $(allSquares).click(function() {
   if ($(this).hasClass('ship')) {
     $(this).html('<img src="explosion.jpg" alt="boom" />');
+    boom.play();
     incrementScore();
     $(scoreOne).text('PLAYER 1 SCORE: ' + game.player1.score);
     $(scoreTwo).text('PLAYER 2 SCORE: ' + game.player2.score);
@@ -194,6 +196,19 @@ $(allSquares).click(function() {
     $(this).off('click');
   }
 })
+
+$(winMessage).click(function(){
+  gameReset();
+})
+
+function gameReset () {
+  $(allSquares).fadeTo('slow', 1);
+  $(allSquares).html('');
+  $(scoreOne).text('PLAYER 1 SCORE: 0');
+  $(scoreTwo).text('PLAYER 2 SCORE: 0');
+  winMessage.hide(1000)
+}
+
 
 // var battleship = allSquares[Math.floor(Math.random() * allSquares.length)]
 // // var submarine = allSquares[Math.floor(Math.random() * allSquares.length)]

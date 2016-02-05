@@ -9,15 +9,16 @@ h1 {
 
 #message {
     position: absolute;
-    left: 375px;
-    top: 305px;
+    left: 239px;
+    top: 274px;
     border: 2px solid white;
-    height: 200px;
-    width: 200px;
-    background-color: white;
+    height: 255px;
+    width: 470px;
+    background-color: #050256;
+    color: white;
     font-size: 30px;
     text-align: center;
-    line-height: 200px;
+    line-height: 86px;
     border-radius: 20px;
 }
 
