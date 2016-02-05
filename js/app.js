@@ -218,7 +218,8 @@ var currentPlayer = game.player1
           $(allSquares).html('');
           $(scoreOne).text('PLAYER 1 SCORE: 0');
           $(scoreTwo).text('PLAYER 2 SCORE: 0');
-          winMessage.hide(1000)
+          winMessage.hide(1000);
+          window.location.reload();
         }
 
 
