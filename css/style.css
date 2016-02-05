@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  width: 910px;
 }
 
 #allpage {
@@ -24,7 +25,7 @@ h1 {
 
 #intro {
     position: absolute;
-    left: 168px;
+    left: 179px;
     top: 147px;
     border: 2px solid white;
     height: 557px;
@@ -38,7 +39,7 @@ h1 {
 }
 
 #allgame {
-  width: 890px;
+  width: 910px;
   height: 550px;
   /*background-color: blue;*/
   opacity: .8;
@@ -62,18 +63,20 @@ h1 {
   font: arial;
   text-align: center;
   border-radius: 25px;
+  border: 5px solid black;
 }
 
 #player1 {
   float: right;
   height: 100px;
   width: 150px;
-  background-color: grey;
+  background-color: green;
   margin-top: 100px;
   margin-right: 20px;
   font-size: 30px;
   text-align: center;
   border-radius: 25px;
+  border: 5px solid black;
 }
 
 #rowG {

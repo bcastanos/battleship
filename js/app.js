@@ -2,20 +2,19 @@ var scoreOne = document.getElementById('player1');
 var scoreTwo = document.getElementById('player2');
 var allSquares = document.getElementsByClassName('square')
 var boom = $('#explosionSound')[0]
-
 var introMessage = $('#intro')
-
 var winMessage = $('#message')
-winMessage.hide()
 
-$(introMessage).click(function() {
-  introMessage.hide(1000)})
+      winMessage.hide()
+      $(introMessage).click(function() {
+      introMessage.hide(1000)})
+      $("#player1").css("background-color", "green");
 
-function randomRanged(min,max){return Math.floor(Math.random()*(max-min+1)+min)}
+      function randomRanged(min,max){return Math.floor(Math.random()*(max-min+1)+min)}
 
-  var limitedBattleArray = []
-  var limitedBattleChoose = [randomRanged(0,13)]
-  var limitedBattleNum = limitedBattleChoose[0]
+      var limitedBattleArray = []
+      var limitedBattleChoose = [randomRanged(0,13)]
+      var limitedBattleNum = limitedBattleChoose[0]
 
   makeLimitedBattle()
 
@@ -41,30 +40,22 @@ function randomRanged(min,max){return Math.floor(Math.random()*(max-min+1)+min)}
     return limitedBattleArray;
     }
 
-    var longBattleship = []
-     longBattleship[0] = allSquares[limitedBattleArray[0]]
-     longBattleship[1] = allSquares[limitedBattleArray[1]]
-     longBattleship[2] = allSquares[limitedBattleArray[2]]
-     longBattleship[3] = allSquares[limitedBattleArray[3]]
+      var longBattleship = []
+         longBattleship[0] = allSquares[limitedBattleArray[0]]
+         longBattleship[1] = allSquares[limitedBattleArray[1]]
+         longBattleship[2] = allSquares[limitedBattleArray[2]]
+         longBattleship[3] = allSquares[limitedBattleArray[3]]
 
-     longBattleship[0].className += ' ship'
-     longBattleship[1].className += ' ship'
-     longBattleship[2].className += ' ship'
-     longBattleship[3].className += ' ship'
+         longBattleship[0].className += ' ship'
+         longBattleship[1].className += ' ship'
+         longBattleship[2].className += ' ship'
+         longBattleship[3].className += ' ship'
 
-    var subArray = []
-    var subChoose = [randomRanged(14,20)]
-    var subNum = subChoose[0]
+      var subArray = []
+      var subChoose = [randomRanged(14,20)]
+      var subNum = subChoose[0]
 
     makeSub()
-    var longSubmarine = []
-     longSubmarine[0] = allSquares[subArray[0]]
-     longSubmarine[1] = allSquares[subArray[1]]
-     longSubmarine[2] = allSquares[subArray[2]]
-
-     longSubmarine[0].className += ' ship'
-     longSubmarine[1].className += ' ship'
-     longSubmarine[2].className += ' ship'
 
     function makeSub() {
         add7 = subNum + 7;
@@ -75,19 +66,22 @@ function randomRanged(min,max){return Math.floor(Math.random()*(max-min+1)+min)}
         return subArray;
       }
 
+      var longSubmarine = []
+         longSubmarine[0] = allSquares[subArray[0]]
+         longSubmarine[1] = allSquares[subArray[1]]
+         longSubmarine[2] = allSquares[subArray[2]]
+
+         longSubmarine[0].className += ' ship'
+         longSubmarine[1].className += ' ship'
+         longSubmarine[2].className += ' ship'
+
+
+
       var destroyerArray = []
       var destroyerChoose = [randomRanged(35,41)]
       var destroyerNum = destroyerChoose[0]
 
     makeDestroy()
-    var longDestroyer = []
-     longDestroyer[0] = allSquares[destroyerArray[0]]
-     longDestroyer[1] = allSquares[destroyerArray[1]]
-     longDestroyer[2] = allSquares[destroyerArray[2]]
-
-     longDestroyer[0].className += ' ship'
-     longDestroyer[1].className += ' ship'
-     longDestroyer[2].className += ' ship'
 
     function makeDestroy() {
       if (35 <= destroyerNum && destroyerNum <= 39) {
@@ -109,11 +103,23 @@ function randomRanged(min,max){return Math.floor(Math.random()*(max-min+1)+min)}
       return destroyerArray;
       }
 
+      var longDestroyer = []
+       longDestroyer[0] = allSquares[destroyerArray[0]]
+       longDestroyer[1] = allSquares[destroyerArray[1]]
+       longDestroyer[2] = allSquares[destroyerArray[2]]
+
+       longDestroyer[0].className += ' ship'
+       longDestroyer[1].className += ' ship'
+       longDestroyer[2].className += ' ship'
+
+
+
       var carrierArray = []
       var carrierChoose = [randomRanged(42,48)]
       var carrierNum = carrierChoose[0]
 
     makeCarrier()
+
     var longCarrier = []
      longCarrier[0] = allSquares[carrierArray[0]]
      longCarrier[1] = allSquares[carrierArray[1]]
@@ -142,6 +148,16 @@ function randomRanged(min,max){return Math.floor(Math.random()*(max-min+1)+min)}
       return carrierArray;
       }
 
+      var longDestroyer = []
+       longDestroyer[0] = allSquares[destroyerArray[0]]
+       longDestroyer[1] = allSquares[destroyerArray[1]]
+       longDestroyer[2] = allSquares[destroyerArray[2]]
+
+       longDestroyer[0].className += ' ship'
+       longDestroyer[1].className += ' ship'
+       longDestroyer[2].className += ' ship'
+
+//////////////////////////////////////////////////////////////////////////////
 
 var game = {
   player1: {name: "Player 1",score: 0},
@@ -149,65 +165,61 @@ var game = {
 }
 var currentPlayer = game.player1
 
-function incrementScore(){currentPlayer.score += 1;}
 
-$("#player1").css("background-color", "green");
+      function incrementScore(){currentPlayer.score += 1;}
 
-function switchTurn(){
-  if(currentPlayer == game.player1){
-    currentPlayer = game.player2;
-    $("#player1").css("background-color", "red");
-    $("#player2").css("background-color", "green");
-  } else {
-    currentPlayer = game.player1;
-    $("#player1").css("background-color", "green");
-    $("#player2").css("background-color", "red");
-  }
-  // return currentPlayer
-}
+      function switchTurn(){
+        if(currentPlayer == game.player1){
+          currentPlayer = game.player2;
+          $("#player1").css("background-color", "red");
+          $("#player2").css("background-color", "green");
+        } else {
+          currentPlayer = game.player1;
+          $("#player1").css("background-color", "green");
+          $("#player2").css("background-color", "red");
+        }}
 
-function checkWinner() {
-  if ((game.player1.score + game.player2.score) > 12) {
-    if (game.player1.score > game.player2.score) {
-      winMessage.html('<p>Player 1 Wins!</p> <p>Click to play again...</p>');
-      winMessage.show(1000);
+      function checkWinner() {
+        if ((game.player1.score + game.player2.score) > 12) {
+          if (game.player1.score > game.player2.score) {
+            winMessage.html('<p>Player 1 Wins!</p> <p>Click to play again...</p>');
+            winMessage.show(1000);
+            }
+          else {
+            winMessage.html('<p>Player 2 Wins!</p> <p>Click to play again...</p>');
+            winMessage.show(1000);
+          }}
+        else {}
       }
-    else {
-      winMessage.html('<p>Player 2 Wins!</p> <p>Click to play again...</p>');
-      winMessage.show(1000);
-    }
-  }
-  else {}
-}
 
-$(allSquares).click(function() {
-  if ($(this).hasClass('ship')) {
-    $(this).html('<img src="explosion.jpg" alt="boom" />');
-    boom.play();
-    incrementScore();
-    $(scoreOne).text('PLAYER 1 SCORE: ' + game.player1.score);
-    $(scoreTwo).text('PLAYER 2 SCORE: ' + game.player2.score);
-    checkWinner();
-    $(this).off('click');
-    // console.log(currentPlayer);
-  } else {
-  $(this).fadeTo('slow', .025);
-    switchTurn();
-    $(this).off('click');
-  }
-})
+        $(allSquares).click(function() {
+          if ($(this).hasClass('ship')) {
+            $(this).html('<img src="explosion.jpg" alt="boom" />');
+            boom.play();
+            incrementScore();
+            $(scoreOne).text('PLAYER 1 SCORE: ' + game.player1.score);
+            $(scoreTwo).text('PLAYER 2 SCORE: ' + game.player2.score);
+            checkWinner();
+            $(this).off('click');
+            // console.log(currentPlayer);
+          } else {
+          $(this).fadeTo('slow', .025);
+            switchTurn();
+            $(this).off('click');
+          }
+        })
 
-$(winMessage).click(function(){
-  gameReset();
-})
+        $(winMessage).click(function(){
+          gameReset();
+        })
 
-function gameReset () {
-  $(allSquares).fadeTo('slow', 1);
-  $(allSquares).html('');
-  $(scoreOne).text('PLAYER 1 SCORE: 0');
-  $(scoreTwo).text('PLAYER 2 SCORE: 0');
-  winMessage.hide(1000)
-}
+        function gameReset () {
+          $(allSquares).fadeTo('slow', 1);
+          $(allSquares).html('');
+          $(scoreOne).text('PLAYER 1 SCORE: 0');
+          $(scoreTwo).text('PLAYER 2 SCORE: 0');
+          winMessage.hide(1000)
+        }
 
 
 // var battleship = allSquares[Math.floor(Math.random() * allSquares.length)]
