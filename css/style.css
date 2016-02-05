@@ -28,7 +28,8 @@ h1 {
     border: 2px solid white;
     height: 557px;
     width: 566px;
-    background-color: white;
+    background-color: #050256;
+    color: white;
     font-size: 30px;
     text-align: center;
     line-height: 40px;

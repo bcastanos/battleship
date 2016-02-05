@@ -141,11 +141,6 @@ function randomRanged(min,max){return Math.floor(Math.random()*(max-min+1)+min)}
       return carrierArray;
       }
 
-// console.log([Math.floor(Math.random() * allSquares.length)])
-
-// function allSqRand() {
-//   console.log(Math.random() * allSquares.length)
-// }
 
 var game = {
   player1: {name: "Player 1",score: 0},
@@ -153,9 +148,7 @@ var game = {
 }
 var currentPlayer = game.player1
 
-function incrementScore(){
-  currentPlayer.score += 1;
-}
+function incrementScore(){currentPlayer.score += 1;}
 
 $("#player1").css("background-color", "green");
 
@@ -172,16 +165,6 @@ function switchTurn(){
   // return currentPlayer
 }
 
-// console.log(game.player1.score + game.player2.score)
-// function checkWinner() {
-//   if ((game.player1.score + game.player2.score) > 9) {
-//     if (game.player1.score > game.player2.score) {window.alert('Player 1 Wins!')}
-//     else {window.alert('Player 2 Wins!')}
-//   }
-//   else {}
-//
-// }
-
 function checkWinner() {
   if ((game.player1.score + game.player2.score) > 12) {
     if (game.player1.score > game.player2.score) {
@@ -194,10 +177,7 @@ function checkWinner() {
     }
   }
   else {}
-
 }
-
-
 
 $(allSquares).click(function() {
   if ($(this).hasClass('ship')) {
